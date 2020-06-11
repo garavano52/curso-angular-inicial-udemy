@@ -1,0 +1,40 @@
+<!-- Puedes usar routerLink = "ruta" ; para rutas estáticas y 
+    [routerLink] = " [ 'ruta' ] "; para rutas dinámicas o cuando necesites enviar parámetros en tu ruta 
+  Normalmente cuando tu veas que hay llaves cuadradas [  ], quiere decir que estamos enlazando propiedades, cuando lo hago de esta manera:
+    [routerLink]="['ruta','parametro1','parametro2']" 
+  Es mucho más fácil de leer (a mi parecer) que esto:
+    routerLink="/ruta/{‌{ parametro1 }}/{‌{ parametro2 }} 
+  Ya que de la forma con llaves, podemos fácilmente cambiar los valores usando variables sin hacer la interpolación con las dos llaves, esos valores pueden ser rutas o parámetros.
+-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Auth0 App</a>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive = "active" [routerLink]= "['home']">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive = "active" [routerLink]= "['precios']">Precios</a>
+            </li>
+            <li class="nav-item" *ngIf="auth.loggedIn" >
+                <a class="nav-link" routerLinkActive = "active" routerLink= "/protegida">Protegida</a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+           <button 
+                (click)="auth.login()"
+                *ngIf="!auth.loggedIn" class="btn btn-outline-primary">
+                Ingresar
+           </button>
+
+           <button 
+                (click)="auth.logout()"
+                *ngIf="auth.loggedIn" 
+                class="btn btn-outline-danger ml-3">
+                Salir
+            </button>
+
+        </span>
+    </div>
+</nav>

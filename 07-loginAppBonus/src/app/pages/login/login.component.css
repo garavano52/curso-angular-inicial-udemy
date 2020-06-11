@@ -1,0 +1,11 @@
+
+
+
+body {
+    background-color: black;
+    color: white !important;
+}
+
+.swal-overlay {
+    background-color: rgba(1, 10, 10, 0.45);
+  }

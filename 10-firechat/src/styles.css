@@ -1,0 +1,86 @@
+.main-container{
+  margin-top: 40px;
+  margin-bottom: 150px;
+}
+
+.puntero{
+  cursor: pointer;
+}
+
+.caja_texto {
+  border-radius: 10px;
+}
+
+.linea_sep {
+  border: 1px solid #366ad3;
+}
+
+/* width del Scroll */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track Fondo de lo extior al Scroll */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 20px;
+}
+
+/* Handle on hover CUando Apoyo el mouse en el Scroll*/
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+.chat-window{
+  padding: 2px;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border: 3px solid #366ad3;
+  border-radius: 15px;
+}
+
+.app-mensajes{
+  /* COn aauto No muestra el Scroll si no es necesario - Scroll muestra siempre */
+  overflow-y:auto;
+  height:270px;
+  /*background:gray;*/
+  padding: 5px;
+}
+
+
+/* Animaciones */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}

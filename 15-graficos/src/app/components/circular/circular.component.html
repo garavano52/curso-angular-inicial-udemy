@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-6">
+    <div class="chart">
+      <canvas baseChart width="100" height="60"
+        [data]="pieChartData"
+        [labels]="pieChartLabels"
+        [chartType]="pieChartType"
+        [options]="pieChartOptions"
+        [plugins]="pieChartPlugins"
+        [colors]="pieChartColors"
+        [legend]="pieChartLegend">
+      </canvas>
+    </div>
+  </div>
+  <div class="col-6">
+    <div>
+      <button class="btn btn-outline-primary"  (click)="pieChartLegend=!pieChartLegend">Toggle Legend</button>
+      <button class="btn btn-outline-secondary ml-3" (click)="changeLabels()">Change Labels</button>
+      <button class="btn btn-outline-info ml-3" (click)="addSlice()">Add Slice</button>
+      <button class="btn btn-outline-danger ml-3" (click)="removeSlice()">Remove Slice</button>
+      <button class="btn btn-outline-secondary mt-3" (click)="changeLegendPosition()">Change Legend Position</button>
+    </div>
+  </div>
+</div>
+<br>
+<hr><hr>
+
+
